@@ -22,6 +22,7 @@ module.exports = merge(webpackBaseConfig, {
             allChunks: true
         }),
         new webpack.optimize.CommonsChunkPlugin({
+            external: true, // 告诉插件不要带上publicPath
             name: 'vendors',
             filename: 'js/vendors.[hash].js'
         }),
