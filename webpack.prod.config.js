@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const merge = require('webpack-merge');
 const webpackBaseConfig = require('./webpack.base.config.js');
 const fs = require('fs');
-const path = require('path')
+
 fs.open('./src/config/env.js', 'w', function (err, fd) {
     const buf = 'export default "production";';
     fs.write(fd, buf, 0, buf.length, 0, function (err, written, buffer){});
@@ -13,18 +13,17 @@ fs.open('./src/config/env.js', 'w', function (err, fd) {
 module.exports = merge(webpackBaseConfig, {
     output: {
         publicPath: '/dist/',
-        filename: 'js/[name].[hash].js',
-        chunkFilename: 'js/[name].[hash].chunk.js'
+        filename: '[name].[hash].js',
+        chunkFilename: '[name].[hash].chunk.js'
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: 'css/[name].[hash].css',
+            filename: '[name].[hash].css',
             allChunks: true
         }),
         new webpack.optimize.CommonsChunkPlugin({
-            external: true, // 告诉插件不要带上publicPath
             name: 'vendors',
-            filename: 'js/vendors.[hash].js'
+            filename: 'vendors.[hash].js'
         }),
         new webpack.DefinePlugin({
             'process.env': {
@@ -37,8 +36,8 @@ module.exports = merge(webpackBaseConfig, {
             }
         }),
         new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: './src/template/index_pd.ejs',
+            filename: '../index_prod.html',
+            template: './src/template/index.ejs',
             inject: false
         })
     ]
