@@ -43,9 +43,11 @@
     <div class="layout">
         <div class="layout-ceiling">
             <div class="layout-ceiling-main">
-                <a href="#">注册登录</a> |
+                <!-- <a href="#">注册登录</a>  -->
+                <router-link tag="a" :to="{ name: 'ucenter'}">注册登录</router-link> |
                 <a href="#">帮助中心</a> |
-                <a href="#">安全中心</a> |
+                <!-- <a href="#">安全中心</a> | -->
+                <router-link tag="a" :to="{ name: 'security'}">安全中心</router-link> |
                 <a href="#">服务大厅</a>
             </div>
         </div>
@@ -53,7 +55,6 @@
             <div class="layout-logo"></div>
         </div>
         <div style="height: 200px">
-          <img src="../images/QQ图片20170303141539.png" alt="">
           <router-view></router-view>
         </div>
         <div class="layout-copy">
