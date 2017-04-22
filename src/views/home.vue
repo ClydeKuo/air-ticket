@@ -29,10 +29,10 @@
 						src: 'https://www.youtube.com/watch?v=ERz2EIaDXZo',
 						type: 'video/webm;codecs="vp8,vorbis"'
 					},
-					// {
-					// 	src: 'http://ossweb-img.qq.com/images/lol/v1/banner/big-v8.webm',
-					// 	type: 'video/webm;codecs="vp8,vorbis"'
-					// }
+					{
+						src: 'http://ossweb-img.qq.com/images/lol/v1/banner/big-v8.webm',
+						type: 'video/webm;codecs="vp8,vorbis"'
+					}
 				],
 				onLoad: function () {
 					document.querySelector('.video_cover').style.display = 'none';
@@ -83,7 +83,7 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background: url('../static/images/bg.png') no-repeat;
+			background: url('../static/images/play.png') no-repeat;
 			background-size: cover;
 			background-position: center;
 		}
