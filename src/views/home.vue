@@ -7,7 +7,7 @@
 			<section class="main_content">
 				<div>
 					<h1>Discovery Land</h1>
-					<p class="sub_head">为你找出心仪的行程</p>
+					<p class="sub_head">总会找到适合你的旅行轨迹</p>
 				</div>
 				<div class="links">
 					<router-link tag="a" :to="{ name: 'main'}">开始你的行程</router-link>
@@ -26,11 +26,15 @@
 				resize: true,
 				src: [
 					{
-						src: 'https://www.youtube.com/watch?v=ERz2EIaDXZo',
+						src: 'https://www.discoveryland.tk/video/fly.webm',
 						type: 'video/webm;codecs="vp8,vorbis"'
 					},
+					// {
+					// 	src: 'http://ossweb-img.qq.com/images/lol/v1/banner/big-v8.webm',
+					// 	type: 'video/webm;codecs="vp8,vorbis"'
+					// },
 					{
-						src: 'http://ossweb-img.qq.com/images/lol/v1/banner/big-v8.webm',
+						src: '../static/video/fly',
 						type: 'video/webm;codecs="vp8,vorbis"'
 					}
 				],
@@ -83,7 +87,7 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background: url('../static/images/play.png') no-repeat;
+			background: url('../static/images/bg.png') no-repeat;
 			background-size: cover;
 			background-position: center;
 		}
