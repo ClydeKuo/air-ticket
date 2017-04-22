@@ -26,6 +26,10 @@
 				resize: true,
 				src: [
 					{
+						src: 'http://ootid8wao.bkt.clouddn.com/fly.webm',
+						type: 'video/webm;codecs="vp8,vorbis"'
+					},
+					{
 						src: 'https://www.discoveryland.tk/video/fly.webm',
 						type: 'video/webm;codecs="vp8,vorbis"'
 					},
@@ -33,10 +37,6 @@
 					// 	src: 'http://ossweb-img.qq.com/images/lol/v1/banner/big-v8.webm',
 					// 	type: 'video/webm;codecs="vp8,vorbis"'
 					// },
-					{
-						src: '../static/video/fly',
-						type: 'video/webm;codecs="vp8,vorbis"'
-					}
 				],
 				onLoad: function () {
 					document.querySelector('.video_cover').style.display = 'none';
