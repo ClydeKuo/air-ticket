@@ -1,69 +1,80 @@
 <style scoped>
-    .layout{
+    .layout {
         border: 1px solid #d7dde4;
         background: #f5f7f9;
         position: relative;
         border-radius: 4px;
+        min-height: 100vh;
         overflow: hidden;
-    }
-    .layout-logo{
-        width: 100px;
-        height: 30px;
-        background: #5b6270;
-        border-radius: 3px;
-        float: left;
-        position: relative;
-        top: 15px;
-        left: 20px;
-    }
-    .layout-header{
-        height: 60px;
-        background: #fff;
-        box-shadow: 0 1px 1px rgba(0,0,0,.1);
-    }
-    .layout-copy{
-        text-align: center;
-        padding: 10px 0 20px;
-        color: #9ea7b4;
-    }
-    .layout-ceiling{
-        background: #464c5b;
-        padding: 10px 0;
-        overflow: hidden;
-    }
-    .layout-ceiling-main{
-        float: right;
-        margin-right: 15px;
-    }
-    .layout-ceiling-main a{
-        color: #9ba7b5;
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+        .layout-logo {
+            width: 100px;
+            height: 30px;
+            background: #5b6270;
+            border-radius: 3px;
+            float: left;
+            position: relative;
+            top: 15px;
+            left: 20px;
+        }
+        .layout-header {
+            height: 60px;
+            background: #fff;
+            display:flex;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+        }
+        .layout-body{
+            display:flex;
+            display: -webkit-flex;
+            -webkit-box-flex:1;            
+            flex: 1;
+            .layout-content{
+                flex: 1;
+            }
+        }
+        .layout-copy {
+            text-align: center;
+            flex: 0 0 auto;
+            -webkit-box-flex: 1;
+            padding: 10px 0 20px;
+            color: #9ea7b4;
+        }
+        .layout-ceiling {
+            background: #464c5b;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+        .layout-ceiling-main {
+            float: right;
+            margin-right: 15px;
+        }
+        .layout-ceiling-main a {
+            color: #9ba7b5;
+        }
     }
 </style>
 <template>
     <div class="layout">
         <div class="layout-ceiling">
             <div class="layout-ceiling-main">
-                <!-- <a href="#">注册登录</a>  -->
-                <router-link tag="a" :to="{ name: 'ucenter'}">注册登录</router-link> |
-                <a href="#">帮助中心</a> |
-                <!-- <a href="#">安全中心</a> | -->
-                <router-link tag="a" :to="{ name: 'security'}">安全中心</router-link> |
-                <a href="#">服务大厅</a>
-            </div>
+                <!-- <a href="#">注册登录</a>-->
+                <router-link tag="a" :to="{ name: 'ucenter'}">注册登录</router-link>| <a href="#">帮助中心</a>|
+                <!-- <a href="#">安全中心</a>| -->
+                <router-link tag="a" :to="{ name: 'security'}">安全中心</router-link>| <a href="#">服务大厅</a></div>
         </div>
         <div class="layout-header">
             <div class="layout-logo"></div>
         </div>
-        <div style="height: 200px">
-          <router-view></router-view>
+        <div class='layout-body'>
+            <div class='layout-content'>
+                <router-view></router-view>
+            </div>
         </div>
-        <div class="layout-copy">
-            2011-2016 &copy; TalkingData
-        </div>
+        <div class="layout-copy">2011-2016 &copy; TalkingData </div>
     </div>
 </template>
 <script>
-    export default {
-
-    }
+    export default {}
 </script>

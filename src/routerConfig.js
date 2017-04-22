@@ -3,6 +3,6 @@ const routers = [{
   path: '/',
   title: 'AIR TICKETS',
   component: (resolve) => require(['./app.vue'], resolve),
-  children: [mainRouterConfig]
+  children: mainRouterConfig
 }];
 export default routers;

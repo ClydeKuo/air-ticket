@@ -11,8 +11,7 @@ module.exports = {
         path: path.join(__dirname, './dist')
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 options: {
@@ -56,6 +55,10 @@ module.exports = {
                 loader: 'url-loader?limit=8192&name=images/[hash].[ext]'
             },
             {
+                test: /\.(webm|mp4|mpeg|ogv)\??.*$/,
+                loader: 'file-loader?name=video/[name].[ext]'
+            },
+            {
                 test: /\.(html|tpl)$/,
                 loader: 'html-loader'
             }
@@ -64,7 +67,7 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.vue'],
         alias: {
-            'vue': 'vue/dist/vue.esm.js'
+            'vue': 'vue/dist/vue.esm.js',
         }
     }
 };
