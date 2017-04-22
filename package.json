@@ -6,7 +6,7 @@
   "scripts": {
     "init": "webpack --progress --config webpack.dev.config.js",
     "dev": "webpack-dev-server --port 10001 --content-base ./ --open --inline --hot --compress --history-api-fallback --config webpack.dev.config.js",
-    "build": "webpack --progress --hide-modules --config webpack.prod.config.js"
+    "build": "rd /s /q dist & webpack --progress --hide-modules --config webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
