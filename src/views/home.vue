@@ -112,11 +112,9 @@
 				text-transform: uppercase;
 				font-weight: 600;
 				font-family: 'proxima-nova-condensed', Helvetica;
-				// color: #3399ff;
 				font-size: 35px;
 			}
 			.sub_head {
-				// color: #3399ff;
 				font-size: 18px;
 			}
 			.links {
