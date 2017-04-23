@@ -1,0 +1,17 @@
+.btn {
+    display: inline-flex;
+    padding: 5px 20px;
+    margin: 5px 10px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.btn-title {
+    border-radius: 16px;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.btn-title:hover {
+    border: 1px solid white;
+}

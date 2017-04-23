@@ -1,26 +1,40 @@
 export default [{
-  path: '',
+  path: '',  //flying through clouds
   title: 'HOME',
   name:'home',
   component: (resolve) => require(['./home.vue'], resolve)
-}, {
-  path: '/main',
-  title: 'AIR TICKETS',
+  }, {
+  path: '/airTickets',  
   component: (resolve) => require(['./index.vue'], resolve),
   children: [{
     path: '',
-    title: 'AIR TICKETS',
-    name: 'main',
-    component: (resolve) => require(['./ucenter/index.vue'], resolve),
+    title: '机票',
+    name: 'airTickets',
+    component: (resolve) => require(['./airTickets/index.vue'], resolve),
   }, {
-    path: '/ucenter',
-    title: '用户中心',
-    name: 'ucenter',
-    component: (resolve) => require(['./ucenter/index.vue'], resolve),
+    path: '/signIn',
+    title: '注册',
+    name: 'signIn',
+    component: (resolve) => require(['./signIn/index.vue'], resolve),
   }, {
-    path: '/security',
-    title: '安全中心',
-    name: 'security',
-    component: (resolve) => require(['./security/index.vue'], resolve),
+    path: '/about',
+    title: '关于',
+    name: 'about',
+    component: (resolve) => require(['./aboutus/index.vue'], resolve),
+  }, {
+    path: '/advice',
+    title: '投诉建议',
+    name: 'advice',
+    component: (resolve) => require(['./advice/index.vue'], resolve),
+  }, {
+    path: '/hotel',
+    title: '酒店',
+    name: 'hotel',
+    component: (resolve) => require(['./hotel/index.vue'], resolve),
+  }, {
+    path: '/discovery',
+    title: '发现',
+    name: 'discovery',
+    component: (resolve) => require(['./discovery/index.vue'], resolve),
   }]
 }]

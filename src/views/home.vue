@@ -10,7 +10,7 @@
 					<p class="sub_head">总会找到适合你的旅行轨迹</p>
 				</div>
 				<div class="links">
-					<router-link tag="a" :to="{ name: 'main'}">开始你的行程</router-link>
+					<router-link tag="a" :to="{ name: 'airTickets'}">开始你的行程</router-link>
 				</div>
 			</section>
 		</div>
@@ -87,7 +87,7 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background: url('../static/images/bg.png') no-repeat;
+			background: url('http://ootid8wao.bkt.clouddn.com/bg.jpg') no-repeat;
 			background-size: cover;
 			background-position: center;
 		}

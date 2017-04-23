@@ -1,6 +1,7 @@
 <template>
-<div>sssssssssssssssss1111111sssssssssssssssssssss</div>
-  
+  <div class="">
+    hotel
+  </div>
 </template>
 
 <script>

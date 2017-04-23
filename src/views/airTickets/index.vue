@@ -1,14 +1,11 @@
 <template>
-  <div class="">
-    ssssssssssssssss
-  </div>
+<div>airtickets</div>
+  
 </template>
 
 <script>
 export default {
-  ready(){
-    debugger;
-  }
+  
 }
 </script>
 
