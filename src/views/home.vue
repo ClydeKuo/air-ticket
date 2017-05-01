@@ -10,7 +10,7 @@
 					<p class="sub_head">总会找到适合你的旅行轨迹</p>
 				</div>
 				<div class="links">
-					<router-link tag="a" :to="{ name: 'airTickets'}">开始你的行程</router-link>
+					<router-link tag="button" class="draw" :to="{ name: 'airTickets'}">开始你的行程</router-link>
 				</div>
 			</section>
 		</div>
@@ -24,8 +24,7 @@
 				videoEl: document.querySelector('.background_video'),
 				container: document.querySelector('body'),
 				resize: true,
-				src: [
-					{
+				src: [{
 						src: 'http://ootid8wao.bkt.clouddn.com/fly.webm',
 						type: 'video/webm;codecs="vp8,vorbis"'
 					},
@@ -50,6 +49,113 @@
 		text-align: center;
 		height: 100vh;
 		overflow: hidden;
+		button {
+			background: none;
+			border: 0;
+			box-sizing: border-box;
+			/*box-shadow: inset 0 0 0 2px #f45e61;*/
+			color: #3399ff;
+			font-size: 16px;
+			font-weight: 700;
+			margin: 1em;
+			padding: 15px 20px;
+			cursor: pointer;
+			text-align: center;
+			text-transform: capitalize;
+			position: relative;
+			vertical-align: middle;
+			&::before,
+			&::after {
+				box-sizing: border-box;
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.draw {
+			-webkit-transition: color 0.25s;
+			transition: color 0.25s;
+			&::before,
+			&::after {
+				border: 2px solid transparent;
+				width: 0;
+				height: 0;
+			}
+			&::before {
+				top: 0;
+				left: 0;
+			}
+			&::after {
+				bottom: 0;
+				right: 0;
+			}
+			&:hover {
+				color: #3399ff;
+				&::before,
+				&::after {
+					width: 100%;
+					height: 100%;
+				}
+				&::before {
+					border-top-color: #3399ff;
+					border-right-color: #3399ff;
+					-webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+					transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+				}
+				&::after {
+					border-bottom-color: #3399ff;
+					border-left-color: #3399ff;
+					-webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+					transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+				}
+			}
+		}
+		.spin {
+			width: 6em;
+			height: 6em;
+			padding: 0;
+			&:hover {
+				color: #0eb7da;
+				&::before {
+					border-top-color: #0eb7da;
+					border-right-color: #0eb7da;
+					border-bottom-color: #0eb7da;
+					-webkit-transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+					transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+				}
+				&::after {
+					border-top: 2px solid #0eb7da;
+					border-left-width: 2px;
+					border-right-width: 2px;
+					-webkit-transform: rotate(270deg);
+					-ms-transform: rotate(270deg);
+					transform: rotate(270deg);
+					-webkit-transition: -webkit-transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+					transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+				}
+			}
+			&::before,
+			&::after {
+				top: 0;
+				left: 0;
+			}
+			&::before {
+				border: 2px solid transparent;
+			}
+			&::after {
+				border: 0 solid transparent;
+			}
+		}
+		.circle {
+			border-radius: 100%;
+			box-shadow: none;
+			&::before,
+			&::after {
+				border-radius: ;
+			}
+		}
+
 		h1 {
 			display: block;
 			font-size: 2em;
