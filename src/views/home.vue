@@ -194,7 +194,8 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background: url('http://ootid8wao.bkt.clouddn.com/bg.jpg') no-repeat;
+			/*background: url('http://ootid8wao.bkt.clouddn.com/bg.jpg') no-repeat;*/
+			background: url('../static/images/beach.jpg') no-repeat;
 			background-size: cover;
 			background-position: center;
 		}
