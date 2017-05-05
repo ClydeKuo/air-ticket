@@ -87,7 +87,8 @@
 <style>
     .panel {
         .background {
-            background: url('http://ootid8wao.bkt.clouddn.com/beach.jpg') no-repeat;
+            /*background: url('http://ootid8wao.bkt.clouddn.com/beach.jpg') no-repeat;*/
+            background: url('../../static/images/beach.jpg') no-repeat;
             width: 100%;
             position: relative;
             background-repeat: no-repeat;

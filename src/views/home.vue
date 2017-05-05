@@ -24,10 +24,11 @@
 				videoEl: document.querySelector('.background_video'),
 				container: document.querySelector('body'),
 				resize: true,
-				src: [{
-						src: 'http://ootid8wao.bkt.clouddn.com/fly.webm',
-						type: 'video/webm;codecs="vp8,vorbis"'
-					},
+				src: [
+					// {
+					// 	src: 'http://ootid8wao.bkt.clouddn.com/fly.webm',
+					// 	type: 'video/webm;codecs="vp8,vorbis"'
+					// },
 					{
 						src: 'https://www.discoveryland.tk/video/fly.webm',
 						type: 'video/webm;codecs="vp8,vorbis"'
