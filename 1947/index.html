@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example of jQuery Plugin For Animated 3D Text Shadow Effect</title>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background: #FFF;
+}
+.box {
+	height: 160px;
+	width: 800px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -90px 0 0 -320px;
+}
+p {
+	color: blue;
+	font-size: 120px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	letter-spacing: 10px;
+	cursor: pointer;
+}
+</style>
+<script src="jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+function move(){
+	var i;
+	var a=0;
+	for(i=$(".box p").size();i>0;i--){
+		a=a+1;	
+		$(".box p").eq(i).css({left:a*1,top:a*(-1),opacity:i*0.02});
+		$(".box p").eq(i).animate({left:a*(-1),top:a*(-1),opacity:i*0.02},3000);
+		$(".box").animate({"margin-left":"-350px"},3000);
+		$(".box p").eq(i).animate({left:a*1,top:a*(-1),opacity:i*0.02},3000);
+		$(".box").animate({"margin-left":"-290px"},3000);
+	};
+};	
+
+$(document).ready(function(){
+	var p=0;
+	for(p=0;p<5;p++)
+	{
+		$(".box").append($(".box p").clone());	
+	};
+	move();
+	setInterval(move,6100);
+	$(".box p").click(function(){
+		$(".box p").text("jb51.net").css({"font-size":"110px"});
+		//$(".box").css({"margin-top":"-50px"});
+	});
+	
+});
+</script>
+</head>
+<body>
+<center>
+  <br>
+  <br>
+</center>
+<div class="box">
+  <p>100sucai.com</p>
+</div>
+<div style="margin:20px auto; text-align:center">
+<a href="http://www.jb51.net/" style="color:#06F">更多特效代码欢迎访问：脚本之家</a>
+</div>
+</body>
+</html>
