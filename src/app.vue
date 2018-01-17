@@ -12,7 +12,7 @@
             return {}
         },
         mounted () {
-
+			asaas(){}
         },
         beforeDestroy () {
 
